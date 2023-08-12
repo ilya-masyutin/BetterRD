@@ -279,7 +279,7 @@ class Download:
             raise Exception("Can't fetch the video file")
 
     def fetchAudio(self, url):  # Function to get the audio of a video if any
-        doc = requests.get(url + "/DASH_audio.mp4")
+        doc = requests.get(url + "/DASH_AUDIO_128.mp4")
         if self.destination is not None:
             with open(self.destination + "Audio.mp3", "wb") as f:
                 f.write(doc.content)
